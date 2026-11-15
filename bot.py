@@ -134,10 +134,17 @@ async def create_welcome(update, context):
     output.name = "welcome.jpg"
 
     # Send welcome image
-    await context.bot.send_photo(
-        chat_id=chat.id,
-        photo=output
+    
+await context.bot.send_photo(
+    chat_id=chat.id,
+    photo=output,
+    caption=(
+        f"🎉 Welcome to Telugu Friends Group!\n\n"
+        f"❤️ Welcome {name}!\n"
+        f"🤝 Enjoy your stay with us.\n\n"
     )
+)
+
 
 
 # ========== JOIN DETECTION ==========
